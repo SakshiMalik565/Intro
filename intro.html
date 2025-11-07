@@ -1,0 +1,131 @@
+<!--
+  Intro Page (Single-file HTML)
+  - Replace placeholders: YOUR NAME, your-photo.jpg, Your short bio, links
+  - Save as intro.html and open in a browser
+-->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Intro — SAKSHI MALIK</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{
+      --bg: linear-gradient(135deg,#FDE68A 0%,#FAD0C4 50%, #CFFAFE 100%);
+      --card: rgba(255,255,255,0.85);
+      --accent: #2563EB;
+      --muted: #555;
+    }
+    *{box-sizing:border-box}
+    body{font-family:"Poppins",system-ui,Arial,sans-serif;margin:0;background:var(--bg);min-height:100vh;display:flex;align-items:center;justify-content:center;padding:32px}
+    .card{background:var(--card);backdrop-filter:blur(6px);border-radius:18px;box-shadow:0 10px 30px rgba(10,10,10,0.12);max-width:900px;width:100%;overflow:hidden;display:flex;gap:24px;padding:28px}
+    .profile{width:260px;flex-shrink:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center}
+    .avatar{width:160px;height:160px;border-radius:50%;background:linear-gradient(135deg,#fff,#f3f4f6);display:flex;align-items:center;justify-content:center;overflow:hidden;border:6px solid #fff}
+    .avatar img{width:100%;height:100%;object-fit:cover}
+    h1{margin:14px 0 6px;font-size:22px}
+    p.lead{margin:0;color:var(--muted);font-size:14px}
+    .actions{margin-top:14px;display:flex;gap:8px}
+    .btn{padding:10px 14px;border-radius:10px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:var(--accent);color:#fff}
+    .btn-ghost{background:transparent;border:1px solid rgba(0,0,0,0.08)}
+
+    .content{flex:1;padding:8px 6px}
+    .topline{display:flex;align-items:center;justify-content:space-between;gap:12px}
+    .intro{font-size:18px;margin:8px 0}
+    .intro span.emoji{font-size:20px;margin-right:6px}
+    .bio{color:var(--muted);line-height:1.5;margin-top:8px}
+    .chips{margin:12px 0;display:flex;flex-wrap:wrap;gap:8px}
+    .chip{background:#fff;padding:8px 10px;border-radius:999px;font-weight:600;box-shadow:0 6px 18px rgba(30,41,59,0.06)}
+    .socials{display:flex;gap:10px;margin-top:12px}
+    .socials a{display:inline-flex;align-items:center;gap:8px;padding:8px 10px;border-radius:10px;text-decoration:none;border:1px solid rgba(0,0,0,0.06);background:#fff}
+    .divider{height:1px;background:linear-gradient(90deg,transparent,#e6e6e6,transparent);margin:14px 0;border-radius:6px}
+    .section-title{font-size:13px;color:#333;font-weight:700;margin-bottom:8px}
+    .skills{display:flex;gap:12px;flex-wrap:wrap}
+    .skill{background:rgba(37,99,235,0.08);color:var(--accent);padding:8px 10px;border-radius:10px;font-weight:600}
+    footer{margin-top:18px;color:var(--muted);font-size:13px}
+
+    /* responsiveness */
+    @media (max-width:880px){.card{flex-direction:column;align-items:center}.profile{width:100%;flex-direction:row;gap:16px;padding:12px}.content{padding:6px 0}}
+  </style>
+</head>
+<body>
+  <main class="card">
+    <aside class="profile">
+      <div class="avatar">
+        <!-- Replace 'your-photo.jpg' with your photo filename or an image URL -->
+        <img src="your-photo.jpg" alt="Your Photo" onerror="this.src='data:image/svg+xml;utf8,<svg xmlns=\'http://www.w3.org/2000/svg\' width=160 height=160><rect width=160 height=160 fill=%23eef2ff/><text x=50% y=50% font-size=18 text-anchor=middle fill=%235263a3 dy=.35em>Photo</text></svg>'">
+      </div>
+      <h1>YOUR NAME</h1>
+      <p class="lead">Developer • Designer • Learner</p>
+      <div class="actions">
+        <button class="btn btn-primary" onclick="scrollToContact()">Contact ✉️</button>
+        <a class="btn btn-ghost" href="#" download>Resume ⤓</a>
+      </div>
+    </aside>
+
+    <section class="content">
+      <div class="topline">
+        <div>
+          <div class="intro"><span class="emoji">👋</span><strong>Hi — I'm Sakshi Malik</strong></div>
+          <div class="bio">I build friendly web experiences and solve problems with clean code. I love learning new tech and sharing ideas. Replace this short bio with 1–2 lines about yourself.</div>
+        </div>
+        <div style="text-align:right">
+          <div style="font-size:12px;color:var(--muted)">Location</div>
+          <div style="font-weight:700">City, Country</div>
+        </div>
+      </div>
+
+      <div class="chips" aria-hidden>
+        <div class="chip">Open to work</div>
+        <div class="chip">React</div>
+        <div class="chip">HTML & CSS</div>
+        <div class="chip">Python</div>
+      </div>
+
+      <div class="divider" role="separator"></div>
+
+      <div>
+        <div class="section-title">Skills</div>
+        <div class="skills">
+          <div class="skill">Frontend</div>
+          <div class="skill">UI/UX</div>
+          <div class="skill">Problem Solving</div>
+          <div class="skill">Data Analysis</div>
+        </div>
+      </div>
+
+      <div style="margin-top:14px">
+        <div class="section-title">More about me</div>
+        <p class="bio">I enjoy turning ideas into small projects — from quick prototypes to polished demos. When not coding, I read, sketch, and sip too much tea. ☕️</p>
+      </div>
+
+      <div class="socials" aria-label="social links">
+        <a href="#" title="LinkedIn">LinkedIn</a>
+        <a href="#" title="GitHub">GitHub</a>
+        <a href="#" title="Twitter">Twitter</a>
+      </div>
+
+      <footer id="contact">
+        <div class="section-title">Contact</div>
+        <div style="display:flex;flex-direction:column;gap:6px">
+          <div style="font-weight:700">Email: <a href="mailto:you@example.com">you@example.com</a></div>
+          <div style="color:var(--muted)">Phone: +91 - 00000 00000</div>
+        </div>
+      </footer>
+    </section>
+  </main>
+
+  <script>
+    function scrollToContact(){
+      document.getElementById('contact').scrollIntoView({behavior:'smooth',block:'center'});
+    }
+    // small personalization helpers
+    // You can programmatically replace text like:
+    // document.querySelector('h1').textContent = 'Sakshi Malik';
+  </script>
+</body>
+</html>
+
